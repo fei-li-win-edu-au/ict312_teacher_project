@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root { 
+	
+	--main-color: #5E4600;
+	--main-color2: #2D3D00;
+	--main-color3: #FEF0DE;
+	--main-color4: #fad4a4;
+
+* {
+  box-sizing: border-box;
+	/* This is a size fix of padding expanding*/
+}
+
+body {
+	color: var(--main-color2);
+	font-family: 'Quicksand', sans-serif;
+	background-image: url(images/bg.jpg);
+	min-width: 700px;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1em;
+}
+
+
+table {
+	border-collapse: collapse;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+table, tr, td {
+	border: 1px solid grey;
+}
+
+table td {
+	padding: 5px 15px;
+}
+
+p, h3 {
+	padding: 0 25px;
+}
+
+
+img {
+	outline: 10px solid rgba(255, 255, 255, 0.4);
+	outline-offset: -10px;
+	object-fit: cover;
+}
+
+input:not([type="submit"]):not([type="reset"]), 
+textarea,
+select {
+	background-color: var(--main-color4);
+	border: 1px solid black;
+}
+
+/*-------------header----------------------*/
+
+header {
+	font-size: 2em;
+}
+
+header i {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+/*-------------nav----------------------*/
+
+nav ul {
+	text-align: right;
+	list-style-type: none;
+}
+
+nav ul li {
+	display: inline-block;
+	
+}
+nav ul li a {
+	padding: 10px 20px;
+	margin: 0;
+	text-decoration: none;
+	background-color: var(--main-color);
+	color: #ffffff;
+	font-size: 0.9em;
+	border-radius: 0.5em 0.5em 0 0;
+}
+
+nav ul li a:hover {
+	background-color: var(--main-color2);
+}
+
+nav .active {
+	background-color: var(--main-color2);
+}
+
+
+/*-------------main----------------------*/
+
+main {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.6);
+	margin-top: -7px;
+	padding-bottom: 1em;
+}
+
+#index_main{
+	padding-bottom: 0;
+}
+
+#index_main img {
+	vertical-align: top; /* or middle */
+	margin: 0;
+}
+
+main h2 {
+	text-align: left;
+	padding: 15px 20px;
+	color: #ffffff;
+	background-color: var(--main-color);
+	font-size: 1.2em;;
+	margin: 0 0 1em 0;
+	border-radius: .5em 0 0 0;
+}
+
+#h2_main {
+	margin-bottom: 0;
+}
+
+main a {
+	color: var(--main-color);
+	background-color: var(--main-color3);
+	padding-top: 2px 5px;
+	text-decoration: none;
+}
+
+main a:hover {
+	border-bottom: 1px dashed var(--main-color);
+}
+
+/*-------------footer----------------------*/
+
+footer {
+	font-size: 0.8em;
+	text-align: center;
+	padding: 10px 0 30px 0;
+	color: #ffffff;
+	background-color: var(--main-color);
+	margin-top: -4px;
+	z-index: 6;
+	border-radius: 0 0 0.5em 0.5em;
+}
+
+
+.social-media-icon {
+	color: white;
+	font-size: 1.9em;
+	margin: 20px 8px;
+}
+
+/*-------------index page----------------------*/
+
+#main_img_container{
+	position: relative;
+}
+
+#welcome_main {
+	max-height: 550px;
+}
+
+#welcome_small {
+	max-height: 170px;
+	aspect-ratio: 3/2;
+}
+
+#welcome_message {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	text-align: left;
+	width: 350px;
+	height: calc(100% - 20px);
+	padding: 10px 30px;
+	background-color: rgba(255, 255, 255, 0.8);
+	overflow-y: auto;
+}
+
+/* Set the color of the handle */
+#welcome_message::-webkit-scrollbar-thumb {
+    background-color: var(--main-color); /* Change to your desired color */
+}
+
+#welcome-message-btn {
+	margin-left: 28px;
+	background-color: var(--main-color2);
+	padding: 15px 20px;
+	border-radius: 6px;
+	font-size: .9em;
+	color: white;
+}
+
+/*-------------Abount Us----------------------*/
+
+#about_us_image {
+	float: right;
+	margin: 70px 20px 15px 15px;
+}
+#about_us_message {
+	text-align: left;
+}
+
+/*-------------Search Pads (inside products.php, products_search.php )----------------------*/
+
+#search_pad {
+	text-align: right;
+	margin: 1.5em 0 0.5em 0;
+}
+
+#search_pad a {
+	color: #9F5804;
+	background-color: #FEF0DE;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	text-decoration: none;
+}
+
+#search_pad a:hover {
+	color: #FFFFFF;
+	background-color: #F59019;
+}
+
+#search_result_pad {
+	margin: 0.5em;
+	display: inline-block;
+}
+
+#search_result_pad a {
+	text-align: center;
+}
+
+/*-------------products.php----------------------*/
+
+.image_a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#category_pad {
+	display:inline-block;
+	padding: 1em 0;
+	position: relative;
+}
+
+#category_pad img {
+	width: 30vw;
+	aspect-ratio: 3/4;
+}
+
+#cat_title {
+	position:absolute;
+	left: 10px;
+	top:  50px;
+	background-color: rgba(255, 255, 255, 0.4);
+	width: 160px;
+	padding: 0.3em;
+}
+
+/*-------------products men / women pages----------------------*/
+
+.image_a a {
+	background-color: transparent;
+}
+
+.image_a a:hover {
+	background-color: transparent;
+}
+
+.image_a {
+	/*--already defined in products.php section--*/
+}
+
+.product-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.product-unit img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.product-unit p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+/*-------------products detail page----------------------*/
+
+#p_detail_img {
+	width: 400px;
+	aspect-ratio: 3/4;
+	display: inline-block;
+}
+
+#p_detail_pad {
+	width: 400px;
+	background: rgba(255, 255, 255, 0.8);
+	display: inline-block;
+	vertical-align: top;
+	height: 510px;
+}
+
+#p_detail_pad p {
+	text-align: left;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#p_detail_pad p strong {
+	display: inline-block;
+	background: var(--main-color3);
+	width: 120px;
+	text-align: right;
+	margin: 2px;
+	padding: 5px;
+}
+
+/*-------------products cart page----------------------*/
+
+#cart th {
+	padding: 5px;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#cart_history th{
+	padding: 5px;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#cart_history th, td {
+	font-size: 0.9em;
+}
+
+#order_list {
+	height: 250px;
+	overflow-y: auto;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+#cart_image {
+	width: 100px;
+	aspect-ratio: 3/4;
+}
+
+/*-------------Policy Page----------------------*/
+
+#policy_content{
+	text-align: left;
+}
+
+#photo_row {
+	background-color: var(--main-color3);
+	text-align: center;
+}
+
+#photo_row img {
+	width: 21%;
+	height: 140px;
+	display: inline-block;
+	margin: 15px 6px;
+}
+
+/*-------------Contact Us page----------------------*/
+
+#contact_us_form {
+	display: flex;
+  	justify-content: center; /* Center horizontally */
+  	align-items: center;     /* Center vertically, if the container has a defined height */
+
+}
+
+#contact_us_form i {
+	color: orange;
+	font-size: 1.2em;
+}
+
+input[type="submit"], input[type="reset"] {
+	margin: 0.5em;
+}
+
+/*-------------Backend----------------------*/
+
+.backend {
+	background: rgba(100, 230, 255, 0.8);
+}
+
+#be_image {
+	width: 70px;
+	aspect-ratio: 3/4;
+}
